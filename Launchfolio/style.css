@@ -1,0 +1,322 @@
+:root{
+--bg:#0b0b0b;
+--surface:#121212;
+--line:#232323;
+--text:#ffffff;
+--muted:#8b8b8b;
+--accent:#c8ff00;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.5;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+/* NAV */
+nav{
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(11,11,11,.9);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+
+.nav-wrap{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:1.2rem;
+font-weight:800;
+letter-spacing:-0.03em;
+}
+
+.logo span{
+color:var(--accent);
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--muted);
+font-size:.95rem;
+transition:.2s;
+}
+
+.nav-links a:hover{
+color:var(--text);
+}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+font-size:.95rem;
+transition:.2s ease;
+}
+
+.btn-primary{
+background:var(--accent);
+color:#000;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 30px rgba(200,255,0,.15);
+}
+
+.btn-secondary{
+border:1px solid var(--line);
+color:var(--text);
+}
+
+.btn-secondary:hover{
+border-color:var(--accent);
+color:var(--accent);
+}
+
+/* HERO */
+.hero{
+padding:80px 0 70px;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:50px;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+padding:8px 12px;
+border:1px solid var(--line);
+border-radius:999px;
+font-size:.8rem;
+color:var(--accent);
+margin-bottom:22px;
+}
+
+.hero h1{
+font-size:clamp(2.4rem,6vw,4.6rem);
+line-height:1.02;
+letter-spacing:-0.04em;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:1.08rem;
+color:var(--muted);
+max-width:580px;
+margin-bottom:30px;
+}
+
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-bottom:22px;
+}
+
+.mini-proof{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+font-size:.9rem;
+color:var(--muted);
+}
+
+.mini-proof span{
+color:var(--text);
+}
+
+/* MOCKUP */
+.mockup{
+background:linear-gradient(180deg,#151515,#101010);
+border:1px solid var(--line);
+border-radius:18px;
+padding:18px;
+}
+
+.mock-top{
+display:flex;
+gap:8px;
+margin-bottom:16px;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#333;
+}
+
+.screen{
+border:1px solid var(--line);
+border-radius:14px;
+padding:18px;
+background:#0c0c0c;
+}
+
+.screen h3{
+font-size:1.6rem;
+margin-bottom:6px;
+}
+
+.role{
+color:var(--accent);
+font-weight:700;
+margin-bottom:14px;
+}
+
+.block{
+height:10px;
+border-radius:999px;
+background:#1b1b1b;
+margin-bottom:10px;
+}
+
+.block.short{width:55%;}
+.block.mid{width:75%;}
+
+/* TRUST */
+.trust{
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+padding:18px 0;
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+text-align:center;
+color:var(--muted);
+}
+
+/* SECTIONS */
+section{
+padding:80px 0;
+}
+
+.section-head{
+max-width:700px;
+margin-bottom:40px;
+}
+
+.section-head h2{
+font-size:clamp(2rem,5vw,3rem);
+margin-bottom:12px;
+}
+
+.section-head p{
+color:var(--muted);
+}
+
+/* CARDS */
+.steps,.benefits,.pricing{
+display:grid;
+gap:18px;
+}
+
+.steps{grid-template-columns:repeat(3,1fr);}
+.benefits{grid-template-columns:repeat(2,1fr);}
+.pricing{grid-template-columns:1fr 1fr;}
+
+.card,.price-card{
+background:var(--surface);
+border:1px solid var(--line);
+border-radius:16px;
+padding:26px;
+}
+
+.num,.tag{
+color:var(--accent);
+font-weight:800;
+font-size:.85rem;
+margin-bottom:12px;
+}
+
+.price{
+font-size:2rem;
+font-weight:800;
+margin:10px 0;
+}
+
+.list{
+list-style:none;
+margin-top:10px;
+}
+
+.list li{
+padding:10px 0;
+border-bottom:1px solid var(--line);
+color:var(--muted);
+}
+
+.featured{
+border-color:var(--accent);
+}
+
+/* CTA */
+.cta{
+text-align:center;
+padding:90px 0;
+border-top:1px solid var(--line);
+}
+
+.cta h2{
+font-size:clamp(2rem,5vw,3.2rem);
+margin-bottom:14px;
+}
+
+.cta p{
+color:var(--muted);
+max-width:600px;
+margin:auto;
+}
+
+/* FOOTER */
+footer{
+padding:30px 0;
+border-top:1px solid var(--line);
+text-align:center;
+color:var(--muted);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.hero,.steps,.benefits,.pricing,.trust-grid{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+}

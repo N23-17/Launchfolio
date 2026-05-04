@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Launcher Kit</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE (FORM) */
+.left {
+  width: 40%;
+  padding: 30px;
+  border-right: 1px solid #222;
+  overflow-y: auto;
+}
+
+.left h1 {
+  color: #c8ff00;
+  margin-bottom: 10px;
+}
+
+.left p {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #111;
+  border: 1px solid #222;
+  color: #fff;
+}
+
+button {
+  padding: 12px;
+  background: #c8ff00;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.note {
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* RIGHT SIDE (PREVIEW) */
+.right {
+  width: 60%;
+  background: #000;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <h1>Build Your Portfolio</h1>
+    <p>Launch a job-ready portfolio in minutes.</p>
+
+    <input id="name" placeholder="Your Name">
+    <input id="role" placeholder="Your Role">
+    <textarea id="about" placeholder="About You"></textarea>
+    <input id="skills" placeholder="Skills (comma separated)">
+    <input id="project1" placeholder="Project 1">
+    <input id="project2" placeholder="Project 2">
+
+    <button onclick="updatePreview()">Live Preview</button>
+    <button onclick="download()">Download Portfolio</button>
+
+    <div class="note">
+      Your portfolio updates instantly → download when ready.
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <iframe id="preview"></iframe>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
