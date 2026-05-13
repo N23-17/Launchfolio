@@ -13,6 +13,6 @@ Step 3
 Download & deploy
 
 📸 Example Output
-![Dashboard Preview](Screenshots/Chart_1.png) 
-![Dashboard Preview](Screenshots/Chart_2.png)
+![LandingPage Preview](Launchfolio/Screenshots/Launch_landing_page.png) 
+![Portfolio Preview](Launchfolio/Screenshots/Portfolio_preview.png)
  
